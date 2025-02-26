@@ -9,7 +9,7 @@ def getGumroadData(gumroadAPIKey: str, returnURL: str):
         gumroadUserAPIUrl = f"https://api.gumroad.com/v2/user?access_token={gumroadAPIKey}"
         usernameResponse = requests.get(gumroadUserAPIUrl)
 
-        if salesResponse.status_code != "200" or usernameResponse.status_code != "200":
+        if salesResponse.status_code != 200 or usernameResponse.status_code != 200:
             error_payload = {
                 "message": "Invalid Request",
                 "username": "Gumroad Revenue Tracker",
