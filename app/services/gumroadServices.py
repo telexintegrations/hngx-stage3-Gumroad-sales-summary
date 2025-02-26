@@ -49,7 +49,7 @@ def salesReport(gumroadSalesData, gumroadUsernameData):
     sales = gumroadSalesData.get("sales", [])
 
     if not sales:
-        f"Hello, {gumroadUsernameData["user"]["name"]} \nYou have no recent sales record"
+        f"Hello, {gumroadUsernameData['user']['name']} \nYou have no recent sales record"
 
     totalRevenue = sum(float(sale.get("formatted_total_price","$0").replace("$", "")) for sale in sales)
     total_sales = len(sales)
