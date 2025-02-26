@@ -16,7 +16,7 @@ def integrationJSON():
                 "app_name": "Gumroad Revenue Tracker",
                 "app_description": "Tracks revenue and sales data from Gumroad accounts in real time.",
                 "app_logo": "https://res.cloudinary.com/ddcq3n8nr/image/upload/v1740245016/Telex_Gumroad_byuxfv.jpg",
-                "app_url": "https://gumroad-sales-data.onrender.com",
+                "app_url": "https://hngx-stage3-gumroad-sales-summary.onrender.com",
                 "background_color": "#fff"
             },
             "is_active": True,
@@ -43,7 +43,7 @@ def integrationJSON():
                 }
             ],
             "target_url": "",
-            "tick_url": "https://gumroad-sales-data.onrender.com/tick"
+            "tick_url": "https://hngx-stage3-gumroad-sales-summary.onrender.com/tick"
         }
     }
 
