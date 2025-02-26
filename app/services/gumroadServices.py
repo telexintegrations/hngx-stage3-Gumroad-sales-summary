@@ -48,17 +48,15 @@ def salesReport(gumroadSalesData, gumroadUsernameData):
 
     sales = gumroadSalesData.get("sales", [])
 
-    if not sales:
-        f"Hello, {gumroadUsernameData['user']['name']} \nYou have no recent sales record"
-
     totalRevenue = sum(float(sale.get("formatted_total_price","$0").replace("$", "")) for sale in sales)
     total_sales = len(sales)
 
     report = (
-        f"📊 **Gumroad Sales Summary** 📊\n"
-        f"🛒 Total Sales: **{total_sales}**\n"
-        f"💰 Total Revenue: **${totalRevenue:.2f}**\n\n"
-        f"📦 **Recent Transactions:**\n"
+        f"Hello, {gumroadUsernameData['user']['name']} \n\n"
+        f"📊 Gumroad Sales Summary 📊\n"
+        f"🛒 Total Sales: {total_sales}\n"
+        f"💰 Total Revenue: ${totalRevenue:.2f}\n\n"
+        f"📦 Recent Transactions:\n"
     )
 
     for sale in sales[:5]:
@@ -66,6 +64,6 @@ def salesReport(gumroadSalesData, gumroadUsernameData):
         price = sale.get("formatted_total_price", "N/A")
         timestamp = sale.get("created_at", "Unknown Date")
 
-        report += f"• 🏷️ **{product_name}** - {price} ({timestamp})\n"
+        report += f"• 🏷️ {product_name} - {price} ({timestamp})\n"
 
     return report
