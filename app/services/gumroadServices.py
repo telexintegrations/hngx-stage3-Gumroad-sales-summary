@@ -52,7 +52,7 @@ def salesReport(gumroadSalesData, gumroadUsernameData):
     total_sales = len(sales)
 
     report = (
-        f"Hello, {gumroadUsernameData['user']['name']} \n\n"
+        f"Hello, {gumroadUsernameData['user']['name']}: \n\n"
         f"📊 Gumroad Sales Summary 📊\n"
         f"🛒 Total Sales: {total_sales}\n"
         f"💰 Total Revenue: ${totalRevenue:.2f}\n\n"
